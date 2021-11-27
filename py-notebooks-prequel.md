@@ -113,8 +113,8 @@ Lists are ordered, that is, every item has its place in line, called its **index
 like picking a number at the deli or the DMV. The numbers start at 0, the far left item in the list.  
 ```py	
 	animals = ["zebra", "pika", "octopus", "black bear"]
-    #             ↑		   ↑        ↑            ↑
-	# index		  0        1        2            3
+        #             ↑	      ↑        ↑            ↑
+	# index	      0       1        2            3
 ```
 
 We can retrieve items from a list using its _index_, like this:
@@ -153,7 +153,7 @@ colors = ["red", "green", "blue", "purple", "yellow"]
 # len() is a built-in Python function, not limited to lists, that tells us the number of items in an object
 > len(colors)
 > 5
-# in is another built-in function that can be used on lists to check
+# in is another built-in function that can be used on lists to check if an object is in a collection.
 ```
 #### The rest of the `list` methods can be found in the [Python docs](https://docs.python.org/3/tutorial/datastructures.html). 
 --- 
