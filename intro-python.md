@@ -38,18 +38,29 @@ greet(our_names)
 
 ## Python/JavaScript Comparison
 
-| JavaScript                             | Python                        |
-| -------------------------------------- | ----------------------------- |
-| Array (push)                           | List (append)                 |
-| `function`                             | `def()`                       |
-| White space NBD                        | White space conveys meaning   |
-| `let`/`const` declare variables        | variables not declared        |
-| `if/while (condition) { outcome }`     | `if/while condition: outcome` |
-| `for (let i of array) { function(i) }` | f`or i in list: f(i)`         |
-
+| JavaScript                              | Python                             |
+| --------------------------------------- | ---------------------------------- |
+| Runs in browser, generally (client)     | Runs on server, generally          |
+| White space NBD                         | White space conveys meaning        |
+| Code hoisted, order doesn't matter      | Code read from top to bottom       |
+| camelCase                               | snake_case                         |
+| `console.log()`                         | `print()`                          |
+| `function myFunction(params){}`         | `def myFunction(params):`          |
+| `return`                                | `return `                          |
+| `let`/`const` declare variables         | variables assigned when delcared   |
+| `if/while (condition) { outcome }`      | `if/while condition: outcome`      |
+| `else if (condition) {}`                | `elif condition:`                  |
+| `else {}`                               | `else:`                            |
+| myArray[index] gives item at index      | myList[index] gives item at index  |
+| `for (let i of array) { function(i){}}` | `for i in list: fun(i)`            |
+| Arrays                                  | Lists                              |
+| template literals                       | f strings                          |
+| Objects                                 | Dictionaries                       |
+| DOM Manipulation                        | Nope                               |
+| Event handling/promises                 | asyncio (we probably won't see it) |
 ---
 
-## Try some more Python.
+## Let's try reading some more Python. 
 
 ```py
 
