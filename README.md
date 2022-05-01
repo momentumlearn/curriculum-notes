@@ -23,6 +23,7 @@
 - [Python Lists, Dicts, and Tuples](py-lists-dicts-tuples.md)
 - [Python List Comprehensions](py-list-comprehensions.md)
 - [Working With Files in Python](py-working-with-files.md)
+- [Object Oriented Programming in Python](py-oo-programming.md)
 - [A Tour of Django](django-tour.md)
 - [Structure of Django Diagram](django-diagram.md)
 - [O2M and M2M Diagram](django-relationships.md)
