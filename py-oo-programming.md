@@ -1,8 +1,8 @@
-#Object Oriented Programming with Python - 
+# Object Oriented Programming with Python - 
 
-##Representing real world objects, behavior, and interactions with code
+## Representing real world objects, behavior, and interactions with code
 ---
-#Principles of Object Oriented Programming
+# Principles of Object Oriented Programming
 
 - Abstraction: internal implementation details hidden
 - Encapsulation: related data and behaviors grouped together
