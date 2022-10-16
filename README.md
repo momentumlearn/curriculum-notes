@@ -26,6 +26,7 @@
 - [Object Oriented Programming in Python](py-oo-programming.md)
 - [A Tour of Django](django-tour.md)
 - [Structure of Django Diagram](django-diagram.md)
+- [Django Models]()
 - [O2M and M2M Diagram](django-relationships.md)
 
 ### Phase 3: Back End -- Django & Django REST Framework
