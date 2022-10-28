@@ -4,8 +4,7 @@ AJAX: _Asynchronous JavaScript and XML_
 
 A way of making requests programatically from your JavaScript instead of having the browser sent the request via a link or a url in the address bar.
 
-This way, you can get and send data to a server without having to reload the page or go to a different page. Web API's (application programming interfaces) facilitate this communication by providing a mechanism for the app and the server to interact. On the web, this happens with HTTP requests and responses. Your app may communicate with API's that are part of the app itself or with external API's.  
-
+This way, you can get and send data to a server without having to reload the page or go to a different page. Web API's (application programming interfaces) facilitate this communication by providing a mechanism for the app and the server to interact. On the web, this happens with HTTP requests and responses. Your app may communicate with API's that are part of the app itself or with external API's.
 
 ---
 
@@ -68,17 +67,17 @@ Notice that we pass a second argument to the `fetch` method, in addition to the 
 
 ```js
 fetch(url, {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
-    username: 'pesopenguin',
-    email: 'peso@octonauts.org',
+    username: "pesopenguin",
+    email: "peso@octonauts.org",
   }),
 })
   .then(function (response) {
-    return response.json()
+    return response.json();
   })
   .then(function (data) {
-    console.log('You have been successfully subscribed', data)
-  })
+    console.log("You have been successfully subscribed", data);
+  });
 ```
