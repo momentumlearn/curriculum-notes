@@ -4,7 +4,7 @@ AJAX: _Asynchronous JavaScript and XML_
 
 A way of making requests programatically from your JavaScript instead of having the browser sent the request via a link or a url in the address bar.
 
-This way, you can get and send data to a server without having to reload the page or go to a different page. Web API's (application programming interfaces) facilitate this communication by providing a mechanism for the app and the server to communicate. On the web, this happens with HTTP requests and responses. Your app may communicate with API's that are part of the app itself or with external API's.  
+This way, you can get and send data to a server without having to reload the page or go to a different page. Web API's (application programming interfaces) facilitate this communication by providing a mechanism for the app and the server to interact. On the web, this happens with HTTP requests and responses. Your app may communicate with API's that are part of the app itself or with external API's.  
 
 
 ---
