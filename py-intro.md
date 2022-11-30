@@ -1,10 +1,12 @@
-# Introduction to Programming with JavaScript
+# Introduction to Python
+
+### These notes follow the structure of the js-intro notes.
 
 ---
 
 ## Where does Python come from?
 
-- General purpose programming language developed by Guido van Rossum and released in 1991.
+- General purpose programming language developed by Guido van Rossum and released in 1991. The current version in use is Python3.
 
 ### Stated Goals
 
@@ -139,7 +141,6 @@ function does'''
   ```py
   my_variable = 16
   ```
-- There does exist a `global` keyword that can be used for declaring variables, but it's behavior is not what you would expect and generally not what you would ever want.
 
 ---
 
@@ -159,16 +160,16 @@ function does'''
 `=` is used to assign values to variables. There are shortcuts for using math and updating variables, though.
 
 ```python
-points += 5; // same as points = points + 5
-points *= 2; // same as points = points * 2
+points += 5 # same as points = points + 5
+points *= 2 # same as points = points * 2
 # sadly there is no ++ in Python
 ```
 
 ---
 
-## Write some Python 2
+## Write some more Python
 
-<!-- TODO add examples -->
+<!-- TODO add exercises -->
 
 1. Clone the following repo:
    `https://github.com/momentum-team-8/examples/tree/main/js-hello-world-exercise`
@@ -179,7 +180,7 @@ points *= 2; // same as points = points * 2
 
 ---
 
-## Expressions and statements in JavaScript
+## Expressions and statements in Python
 
 In a computer language, a group of words, numbers, and operators that performs a specific task is a **statement**. We say a statement is "run" or "executed".
 
@@ -199,19 +200,14 @@ Statements are executed to make something happen.
 
 - As with JavaScript, programs are a sequence of statements to execute.
 - Whereas JavaScript runs in the browser, Python runs on the server, executing these statements one after another in the order they are written.
-- Like JavaScript, Python has conditionals and loops.
+- Like JavaScript, Python has conditionals and loops that control the flow of execution.
+- One notable difference is that Python functions must be defined in the program _above_ where they are called. Because of hoisting, JavaScript functions can be defined anywhere. Python simply reads from top to bottom of the program and does not have hoisting.
 
 ---
 
 ## Conditionals
 
-One of the most basic things we need to do in programming is say "if this thing is true, then do this other thing."
-
-# We use **if/else** statements for this.
-
-One of the most basic things we need to do in programming is say "if this thing is true, then do this. (And if it's not true, then don't do it.)"
-
-Sometimes we also want to say "And if it's not true, then do that."
+One of the most basic things we need to do in programming in any language is say "if this thing is true, then do this other thing. (And if it's not true, then don't do it.)"
 
 We use **if** and **if/else** statements for this in Python, too, but the syntax is slightly different than in JavaScript.
 
@@ -243,9 +239,9 @@ else:
 
 ```python
 if predicate:
-  codeBlock
+  code_block
 else:
-  otherCodeBlock
+  other_code_block
 ```
 
 ---
@@ -255,9 +251,9 @@ else:
 In Python, `else if` is compressed into `elif`
 
 ```py
-if yourPoints > theirPoints:
+if your_points > their_points:
   print("You win")
-elif theirPoints > yourPoints:
+elif their_points > your_points:
   print("You lose");
 else:
   print("You tied");
@@ -283,7 +279,7 @@ a = b # assigns the value of b to a
 a == b #compares to see if a is equal to and the same type as b
 ```
 
----
+## Note that for equality and inequality, there are one fewer `=` than in JS.
 
 ## Truthy and Falsy
 
@@ -354,25 +350,25 @@ if 32:
 
 ### These let us combine conditions
 
-`&&` and
-`||` or
-`!` not
+`and` and
+`or` or
+`not` not
 
-```js
-let a = true;
-let b = false;
+```python
+a = True;
+b = False;
 
-a && b; // a AND b have to be true for this expression to evaluate as true
-a || b; // a OR b have to be true for this expression to evaluate as true
-!a; // "not a": if a is true, then this will evaluate to false
-!b; // "not b": if b is false, then this will evaluate to true
+a and b; # a AND b have to be True for this expression to evaluate as True
+a or b; # a OR b have to be True for this expression to evaluate as True
+not a; # "not a": if a is True, then this will evaluate to False
+not b; # "not b": if b is False, then this will evaluate to True
 ```
 
 ---
 
 ## while and for loops
 
-The next basic thing we need to do in programming is repeat the same task over and over.
+The next basic thing we need to do in programming in any language is repeat the same task over and over.
 
 `while` and `for` are our tools for this.
 
@@ -380,13 +376,12 @@ The next basic thing we need to do in programming is repeat the same task over a
 
 ## while loop
 
-```js
-// say hi 5 times
-let count = 0;
-while (count < 5) {
-  console.log("Hi!");
+```python
+# say hi 5 times
+count = 0
+while count < 5:
+  print("Hi!");
   count += 1;
-}
 ```
 
 ---
@@ -395,42 +390,16 @@ while (count < 5) {
 
 A while loop will run its code block as long as its predicate is true.
 
-```js
-while (predicate) {
-  codeBlock;
-}
-```
-
----
-
-## for loop
-
-```js
-// say hi 5 times
-for (let count = 0; count < 5; count++) {
-  console.log("Hi!");
-}
+```print
+while predicate:
+  code_block
 ```
 
 ---
 
 ## for loops
 
-A for loop combines its setup, predicate, and updating in one statement. It will run its code block as long as its predicate is true.
-
-```js
-for (setup; predicate; update) {
-  codeBlock;
-}
-```
-
----
-
-## When do I use a while loop vs a for loop?
-
-- A for loop is for when you need to go through a limited list of numbers, always increasing (or decreasing) by the same amount, and ending at a specified point.
-- A while loop is for everything else.
-- You might think you'd use more while loops than for loops, but that's not usually the case.
+Python does not have the equivalent of JavaScript's `for` loops. Both the functions of `for` loops and `for of` loops are performed by `for in` loops, which we will look at in detail along with lists (Python's name for arrays).
 
 ---
 
@@ -438,98 +407,70 @@ for (setup; predicate; update) {
 
 ### Finding the first 10 prime numbers
 
-```js
-let primeCount = 0;
-let currentNumber = 1;
+```python
+prime_count = 0
+current_number = 1
 
-while (primeCount < 10) {
-  if (isPrime(currentNumber)) {
-    console.log(currentNumber, "is prime");
-    primeCount += 1;
-  }
-  currentNumber += 1;
-}
+while prime_count < 10:
+  if is_prime(current_number):
+    print(current_number, "is prime")
+    prime_count += 1
+  current_number += 1
 ```
 
-Note: this depends on a function named isPrime() that we don't have defined here.
+Note: this depends on a function named is_prime() that we don't have defined here.
 
 ---
 
-## For loop example
+## Example of what was a `for` loop in JavaScript
 
 ### FizzBuzz
 
-```js
-for (let i = 1; i <= 100; i++) {
-  if (i % 3 === 0) {
-    console.log(" Fizz");
-  } else if (i % 5 === 0) {
-    console.log(" Buzz");
-  } else {
-    console.log(i);
-  }
-}
+```py
+for i in range(101):
+  #range() generates a list of numbers from 0 to 100
+  if i % 3 == 0:
+    print(" Fizz")
+  elif i % 5 == 0:
+    print(" Buzz")
+  else:
+    print(i)
 ```
 
 ---
 
-## What is a function?
+## Functions in Python
 
-A function is a block of code that takes zero or more values and returns one value.
+As in javaScript, a function is a block of code that takes zero or more values and returns one value.
 
-This block of code isn't executed immediately, but later when it is _called_.
+Functions can also have side effects, which are changes caused apart from the value that the function returns.
 
----
-
-## Think about a recipe - black beans and rice
-
-1. **Chop** an _onion_.
-2. **Mince** _two cloves of garlic_.
-3. **Heat** _1 teaspoon olive oil_ in a _stockpot_ over _medium-high heat_.
-4. **Add** the _onion_ and _garlic_ and **saute** for _4 minutes_.
-5. **Add** the _rice_ and **saute** for _2 minutes_.
-6. **Add** _1.5 cups of vegetable broth_ and **boil** _the mixture_.
-7. **Lower the heat** and **cook** for _20 minutes_.
-8. **Add** _the spices_ and _3.5 cups black beans_.
+Python uses the keyword `return` as JavaScript does.
 
 ---
 
-## How to chop a vegetable
+You **declare** a function in python with the keyword `def`.
 
-1. If the _vegetable_ is an onion, **peel back** the _papery skin_ and **cut off** the _top_.
-2. **Cut** the _vegetable_ in _half_.
-3. **Place** _each half_ cut-side down and **slice** the _vegetable_ _lengthwise_ in _parallel cuts_.
-4. **Cut** the _vegetable_ with _several horizontal cuts parallel to the board_.
-5. **Cut** through the _vegetable_ at _right angles to the board_.
-
-- Each work in recipe vocabulary (chop, mince, saute, boil, etc) contains several sub-steps. These are _functions_!
-- How you do each of these things is dependent on what you're doing it to (the _arguments_!)
-
----
-
-You need to **declare** the function first.
-
-```js
-function sayHello(name) {
-  return "Hello, " + name + "!";
-}
+```py
+def say_hello(name):
+  return "Hello, " + name + "!"
 ```
 
-Then you can **call** the function, which will actually run the code inside the curly braces.
+Then you can **call** the function, which will actually run the code that is indented after the first line. Whitespace in Python serves the purpose that `{}` did in JavaScript.
 
-```js
-sayHello("Charlie");
-// Hello, Charlie!
+```py
+say_hello("Charlie")
+# Hello, Charlie!
 ```
 
 ---
 
-## Notes about functions
+## Notes about functions, mostly the same as for JavaScript except the keyword
 
 - Function declarations: a block of code that you define once and then can "invoke," or "call," over and over from other places in your code.
 - _Declaring_ the function and _calling_ the function are two separate steps.
-- Declare a function with the `function` keyword.
-- The code inside the curly braces is executed when the function is called.
+- Declare a function with the `def` keyword.
+- The indented code is executed when the function is called.
 - To call a function, you need the name of the function and parentheses after it.
 - Can optionally take _arguments_ (aka _parameters_), which are values you give to the function when you call it. When your function needs to receive some outside information to run, you need an argument. Can have multiple arguments. The position of the arguments matters.
 - Functions can optionally return a value back. To return a value from the function, you need the `return` keyword.
@@ -539,24 +480,23 @@ sayHello("Charlie");
 
 ## Creating and using functions
 
-```js
-function ordinal(num) {
-  if ((num > 3 && num <= 20) || (num < -3 && num >= -20)) {
-    return num + "th";
-  } else if (Math.abs(num % 10) === 1) {
-    return num + "st";
-  } else if (Math.abs(num % 10) === 2) {
-    return num + "nd";
-  } else if (Math.abs(num % 10) === 3) {
-    return num + "rd";
-  }
-  return num + "th";
-}
+```py
+def ordinal(num):
+  if (num > 3 and num <= 20) or (num < -3 and num >= -20):
+    return str(num) + "th"
+    # note that unlike in JS, we have to convert num to a string type in order to be able to add it to another string
+  elif abs(num % 10) == 1:
+      return str(num) + "st"
+  elif abs(num % 10) == 2:
+      return str(num) + "nd"
+  elif abs(num % 10) == 3:
+      return str(num) + "rd"
+  return str(num) + "th"
 ```
 
 ---
 
-## Function arguments and variable names
+## Function arguments and variable names, same as in JavaScript
 
 - Function arguments are like variables
 - You can reassign them with new values
@@ -566,53 +506,60 @@ function ordinal(num) {
 
 ## Using different variable and argument names example
 
-```js
-let ballRadius = 10;
-let pi = 3.14159;
+```py
+ball_radius = 10
+pi = 3.14159
 
-function circleArea(radius) {
+def circle_area(radius) {
   return pi * radius * radius;
 }
 
-console.log(circleArea(ballRadius));
+print(circle_area(ball_radius));
 ```
 
 ---
 
-## Write some Javascript 3
+## Write some Python
 
-Create a javascript file and link it to an html page (or use one the you created earlier). In the js file, write four functions as described below. You should be able to call these four functions in the console.
+Create a python file. In this file, write four functions as described below. You should be able to call these four functions later in the file. To run a Python program in the
+Terminal, type `python your_file_name.py`
 
-1. a function that takes a single argument and then logs that argument to the console.
+1. a function that takes a single argument and then prints that argument in the terminal.
 2. a function called sum with two parameters that returns the sum of those 2 numbers.
-3. a function called getLength that takes one argument (a string) and returns its length
-4. a function that takes a character as an argument (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
+3. a function called get_length that takes one argument (a string) and returns its length
+4. a function that takes a character as an argument (i.e. a string of length 1) and returns True if it is a vowel, False otherwise.
 
 ---
 
 ## Scope
 
-Variables have a _scope_ -- a defined area of the code where they exist and can be used. If you define a variable outside of any code block (an area surrounded by curly braces), it is available throughout your code. If you define a variable within a code block, it is available in that code block and all code blocks nested under it.
+In your Python program, `name` refers to variables, constants, functions, classes, and any object that can be given a name. Not every name is accessible in every part of the program. Scope determines where in the program a name is accessible. Python looks up names in an order referred to as LEGB.
 
----
+- Local (function)
+- Enclosing (for nested functions)
+- Global (module)
+- Built-in (running a program or shell)
+
+Note that the keyword `global` does exist in Python, but it does not cause the behavior you would expect and generally should be avoided.
 
 ## Scope Example
 
-```js
-// global scope
-let name = "Keelan";
-let score = 0;
+One important difference between Python and JavaScript regarding scope is that Python does not have hoisting. Functions in Python are available in the order that they are written. You cannot call a function above where it is defined in a program.
 
-if (score === 0) {
-  // new scope - name and score are available
-  let punctuation = "!";
-  printLoss(name, punctuation);
-}
+### global scope
 
-function printLoss(name, punctuation) {
-  // new scope - name and punctuation are available from the arguments,
-  // and score is available from the global scope
-  let message = "You lose, " + name + punctuation;
-  console.log(message);
-}
+```py
+name = "Keelan"
+score = 0
+
+if score == 0:
+  # new scope - name and score are available
+  punctuation = "!"
+  print_loss(name, punctuation)
+
+def print_loss(name, punctuation):
+  # new scope - name and punctuation are available from the arguments,
+  # and score is available from the global scope
+  message = "You lose, " + name + punctuation + " Score: " + str(score)
+  print(message)
 ```
