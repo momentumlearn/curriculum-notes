@@ -572,18 +572,6 @@ print(circle_area(ball_radius));
 
 ---
 
-## Write some Python
-
-Create a python file. In this file, write four functions as described below. You should be able to call these four functions later in the file. To run a Python program in the
-Terminal, type `python your_file_name.py`
-
-1. a function that takes a single argument and then prints that argument in the terminal.
-2. a function called sum with two parameters that returns the sum of those 2 numbers.
-3. a function called get_length that takes one argument (a string) and returns its length
-4. a function that takes a character as an argument (i.e. a string of length 1) and returns True if it is a vowel, False otherwise.
-
----
-
 ## Scope
 
 In your Python program, `name` refers to variables, constants, functions, classes, and any object that can be given a name. Not every name is accessible in every part of the program. Scope determines where in the program a name is accessible. Python looks up names in an order referred to as LEGB.
@@ -616,3 +604,56 @@ def print_loss(name, punctuation):
   message = "You lose, " + name + punctuation + " Score: " + str(score)
   print(message)
 ```
+
+---
+
+## Quick reference for Python syntax
+
+```py
+# variables
+var_name = value
+
+# functions
+def my_function(parameter1, parameter2):
+    # here's where the action happens, indentation after a : is the equivalent of {} in JS. Indentation needs to be a consistent amount of spaces. We will use 4, which is standard.
+    return value_to_be_returned
+
+# to see values in the console
+print(value)
+
+# conditionals
+if a > b:
+    return(a)
+
+# loops
+while b < a:
+    b += 1
+
+for item in my_list:
+   # do something to the item
+
+# remember to use snake_case instead of camelCase
+```
+
+---
+
+## Let's write some Python and see what happens.
+
+Copy this code in an empty Python file, but do not run it.
+
+Predict what you think will happen.
+
+Then, run it and check your expectations against what happens.
+
+```py
+
+def greet(names):
+    for name in names:
+        print(f"Hi, {name}!")
+
+our_names = ["Amy", "Jeanette", "Rebecca", "Dawn", "Dwayne 'The Rock' Johnson"]
+
+greet(our_names)
+```
+
+---
