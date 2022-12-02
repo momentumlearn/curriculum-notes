@@ -167,7 +167,7 @@ You can obtain items from a tuple by its index, as we did with lists:
 	"Rami Jaffee": ("keyboard", "piano"),
 	"Nandi Bushell": "more awesome drums",
 }
-# Let's say this causes Taylor Hawkns to become disgruntled and quit. We can update his entry like this:
+# Let's say it's a magical world where Taylor Hawkins lives out a long and luxurious retirement and Nandi takes over for him entirely:
 > foo_fighters["Taylor Hawkins"] = "retired"
 # Now our dictionary shows his new status
 > foo_fighters
@@ -189,10 +189,23 @@ You can obtain items from a tuple by its index, as we did with lists:
 You have to use square brackets enclosing a string to retrieve values by their key. Dot notation will not work like it does in JS.
 
 ```py
+>>> fruit_amounts = {
+'apples': 3,
+'peaches': 6
+'pears': 2
+}
+
 >>> fruit_amounts['apples']
 3
 >>> fruit_amounts.apples # ⛔ NOPE! This won't work!
 ```
+
+### You can also obtain a value from a dictionary using `get()
+
+````py
+fruit_amounts.get('apples') = 3
+# get() will return a default value if it can't find the key it's looking for, whereas the [] notation will just error if it can't find the key. Unless you specify otherwise, that default value is None
+fruit_amounts.get('mango') = None
 
 ---
 
@@ -203,3 +216,4 @@ Lists, dictionaries, and tuples are **iterable**, meaning we can loop through th
 		if person[1] != "retired":
 			print(f'{person[0]} plays {person[1]}')
 ```
+````
