@@ -202,10 +202,11 @@ You have to use square brackets enclosing a string to retrieve values by their k
 
 ### You can also obtain a value from a dictionary using `get()
 
-````py
+```py
 fruit_amounts.get('apples') = 3
 # get() will return a default value if it can't find the key it's looking for, whereas the [] notation will just error if it can't find the key. Unless you specify otherwise, that default value is None
 fruit_amounts.get('mango') = None
+```
 
 ---
 
@@ -216,4 +217,5 @@ Lists, dictionaries, and tuples are **iterable**, meaning we can loop through th
 		if person[1] != "retired":
 			print(f'{person[0]} plays {person[1]}')
 ```
-````
+
+---
