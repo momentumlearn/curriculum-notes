@@ -175,16 +175,14 @@ points *= 2 # same as points = points * 2
 
 ---
 
-## Write some more Python
+## User Input
 
-<!-- TODO add exercises -->
+In Python, users enter data in the terminal. That data is by default a string and can be stored in a variable.
 
-1. Clone the following repo:
-   `https://github.com/momentum-team-8/examples/tree/main/js-hello-world-exercise`
-2. Open the repo in VS Code. You'll be working on the exercises in `main.js`.
-3. Open `index.html` in your browser.
-4. In the browser, open the dev tools and go to the JavaScript console by clicking on the "Console" tab.
-5. Work on exercises 1-8. Uncomment the necessary lines in each exercise as you work on it. When you make a change in the javascript file, save it and then reload the index.html page in the browser. You should see the `console.log()` output in the console.
+```py
+user_input = input("Do you want to play again? ")
+# prints "Do you want to play again? in the terminal. Whatever the user enters will be assigned, as a string, to the variable user_input
+```
 
 ---
 
