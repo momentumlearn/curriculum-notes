@@ -88,7 +88,7 @@ Recall how these were represented in JavaScript.
   - Float (decimals - but careful not to do money with them, use the `Decimal` class instead)
   - Complex (numbers with real and imaginary parts)
 - Can do math with `+`, `-`, `*`, `/`, `%`, and `**`
-- Can compare with `==`\*, `!=`, `>`, `>=`, `<`, and `<=`
+- Can compare with `==`, `!=`, `>`, `>=`, `<`, and `<=`
 
   \* Python also has the `is` comparison operator, which is used to indicate when two objects point to the same location in memory. We will likely only use this when comparing a value to `None` as in `if x is not None:`. There is no exact equivalent to `is` in JavaScript.
 
@@ -148,7 +148,7 @@ function does'''
 - Unlike JavaScript, Python does not use keywords to declare variables. Variables are declared and defined in the same line
   ```py
   my_variable = 16
-  ```
+  ```  
 
 ---
 
@@ -203,10 +203,12 @@ Statements are executed to make something happen.
 ---
 
 ## Programming in Python
-
 - As with JavaScript, programs are a sequence of statements to execute.
 - Whereas JavaScript runs in the browser, Python runs on the server, executing these statements one after another in the order they are written.
 - Like JavaScript, Python has conditionals and loops that control the flow of execution.
+
+---  
+
 - One notable difference is that Python functions must be defined in the program _above_ where they are called. Because of hoisting, JavaScript functions can be defined anywhere. Python simply reads from top to bottom of the program and does not have hoisting.
 
 ---
@@ -386,8 +388,8 @@ The next basic thing we need to do in programming in any language is repeat the 
 # say hi 5 times
 count = 0
 while count < 5:
-  print("Hi!");
-  count += 1;
+  print("Hi!")
+  count += 1
 ```
 
 ---
@@ -396,7 +398,7 @@ while count < 5:
 
 A while loop will run its code block as long as its predicate is true.
 
-```print
+```py
 while predicate:
   code_block
 ```
@@ -574,16 +576,24 @@ print(circle_area(ball_radius));
 
 In your Python program, `name` refers to variables, constants, functions, classes, and any object that can be given a name. Not every name is accessible in every part of the program. Scope determines where in the program a name is accessible. Python looks up names in an order referred to as LEGB.
 
+---  
+
 - Local (function)
 - Enclosing (for nested functions)
 - Global (module)
-- Built-in (running a program or shell)
+- Built-in (running a program or shell)  
 
-Note that the keyword `global` does exist in Python, but it does not cause the behavior you would expect and generally should be avoided.
+---  
+
+Note that the keyword `global` does exist in Python, but it does not cause the behavior you would expect and generally should be avoided.  
+
+---  
 
 ## Scope Example
 
 One important difference between Python and JavaScript regarding scope is that Python does not have hoisting. Functions in Python are available in the order that they are written. You cannot call a function above where it is defined in a program.
+
+---  
 
 ### global scope
 

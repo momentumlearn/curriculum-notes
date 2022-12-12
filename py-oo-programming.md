@@ -1,7 +1,9 @@
-# Object Oriented Programming with Python - 
+# Object Oriented Programming with Python -
 
 ## Representing real world objects, behavior, and interactions with code
+
 ---
+
 # Principles of Object Oriented Programming
 
 - Abstraction: internal implementation details hidden
@@ -18,9 +20,10 @@ class Pet:
     def __init__(self, name, species):
 	# attributes represent qualities & characteristics
         self.name = name
-        self.species = species 
+        self.species = species
 
-nutmeg = Pet(name='Nutmeg', species='dog') 	
+nutmeg = Pet(name='Nutmeg', species='dog')
+# this is 'instantiating' the Pet class, creating an instance. Doing Pet(...) calls the __init__() method of the class
 pet_data = [("Derbs", "cat"), ("Zeke", "dog"), ("Valvano", "dog")]
 pets = []
 for name, species in pet_data:
@@ -28,10 +31,11 @@ for name, species in pet_data:
     pets.append(new_pet)
 
 ```
+
 Methods (verbs)
 
 ```py
 # behaviors of the class
 def call(self):
     print(f'Come here, {self.name}')
-```	
+```

@@ -6,6 +6,8 @@
 
 - **Lists** are useful for demonstrating collections of items and are enclosed in square brackets `[]`. Lists are similar to arrays in JS. They can be items of the same type or different types. Can you have a list of lists? Sure. Lists, as all other data types, can be assigned as values to variables. For example:
 
+---  
+
 ```py
 	# list of strings represented by the variable, `flavors`
 	flavors = ["chocolate", "Cherry Garcia", "vanilla"]
@@ -59,6 +61,7 @@ We can also _slice_ a list, obtaining a segment of the list with indexes, `[star
 	>['pika', 'octopus']
 
 ```
+---  
 
 We can change the value at a given index like this:
 
@@ -82,6 +85,7 @@ This is like array.length in JS
 >>> len(["apples", "peaches", "pumpkin pie"])
 >>> 3
 ```
+---  
 
 ### `append()` adds an item to the end of a list
 
@@ -101,6 +105,7 @@ This is like `push` in JS.
 >>> nerf_guns
 ['Rampage', 'Shockwave RD-15', 'Mediator']
 ```
+---  
 
 ### `remove()` deletes a specified item
 
@@ -122,6 +127,7 @@ You can obtain items from a tuple by its index, as we did with lists:
 > colors_tuple = ("red", "green", "blue", "purple", "orange")
 > colors_tuple[3] = "purple"
 ```
+---  
 
 #### But we can't reassign values because tuples cannot be changed.
 
@@ -142,6 +148,8 @@ You can obtain items from a tuple by its index, as we did with lists:
 
 **Dictionaries** are key: value pairs, Python's version of the concept of _hash tables_. As with Webster's Dictionary, where you look up definitions by the word, you can look up values by their keys in Python dictionaries. Dictionaries in Python are similar to objects in JS. Keys and values can be almost any data type, except: _keys can only appear once in a dictionary, and keys must be of an immutable type (no lists or dictionaries)_. Values can repeat any number of times in a dictionary and can be of any type. Note that dictionaries _do not_ have indexes. They do (as of version 3.6) retain the order that items were inserted, but we don't use indexes to retrieve or update information.
 
+---  
+
 ```py
 	foo_fighters = {
 		"Dave Grohl": ("guitar", "lead vocals"),
@@ -150,13 +158,24 @@ You can obtain items from a tuple by its index, as we did with lists:
 		"Nate Mendel": "bass",
 		"Taylor Hawkins": ("drums", "percussion", "backing vocals"),
 		"Rami Jaffee": ("keyboard", "piano"),
-		}
+		}  
+
+```
+
+---  
+
+
 # to obtain what Dave Grohl plays in Foo Fighters (now, not the first album where he played everything), we can use the key to find the value.
 > foo_fighters["Dave Grohl"]
 > ('guitar', 'lead vocals')
 # if we want to update a dictionary, as in the case where the young drumming prodigy Nandi Bushell, who owned Dave Grohl in an Internet drum battle, joins the band as another drummer, we add key:value pairs to a dictionary by assigning a value to the new key.
 > foo_fighters["Nandi Bushell"] = "more awesome drums"
-# our dictionary has been updated
+# our dictionary has been updated   
+
+--- 
+
+
+```py
 > foo_fighters
 > {
 	"Dave Grohl": ("guitar", "lead vocals"),
@@ -167,6 +186,7 @@ You can obtain items from a tuple by its index, as we did with lists:
 	"Rami Jaffee": ("keyboard", "piano"),
 	"Nandi Bushell": "more awesome drums",
 }
+
 # Let's say it's a magical world where Taylor Hawkins lives out a long and luxurious retirement and Nandi takes over for him entirely:
 > foo_fighters["Taylor Hawkins"] = "retired"
 # Now our dictionary shows his new status
@@ -200,14 +220,19 @@ You have to use square brackets enclosing a string to retrieve values by their k
 >>> fruit_amounts.apples # ⛔ NOPE! This won't work!
 ```
 
+---
+
 ### You can also obtain a value from a dictionary using `get()
 
 ```py
 fruit_amounts.get('apples') = 3
-# get() will return a default value if it can't find the key it's looking for, whereas the [] notation will just error if it can't find the key. Unless you specify otherwise, that default value is None
+# get() will return a default value if it can't find the key it's looking for, 
+# whereas the [] notation will just error if it can't find the key. 
+# Unless you specify otherwise, that default value is None
 fruit_amounts.get('mango') = None
-```
 
+
+```
 ---
 
 Lists, dictionaries, and tuples are **iterable**, meaning we can loop through them, performing tasks on each item one at a time. If we are looping through a dictionary, we have to decide whether we want to loop through the `keys()`, `values()`, or `items()`. The `if` statement will catch the member of the group who does not play an instrument anymore. `items()` gives us each key:value pair as a tuple, and we can access the items in that tuple by index.
