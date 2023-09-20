@@ -34,7 +34,7 @@ selector {
 
 - Always start with a selector, then curly braces.
 - You can have multiple property-value pairs inside the braces.
-- You cannot nest braces.
+- In 2023, browser support for [nesting](https://developer.chrome.com/articles/css-nesting/) in CSS was introduced, in order to streamline syntax when there are multiple elements with different selectors inside the same parent element. Nesting is optional, and writing the code in the more explicit way is often helpful for readability. 
 
 ---
 
